@@ -5,6 +5,9 @@ mods/**/*
 public/**/*
 tmp/**/*
 
+# Database
+prisma/*.db
+
 # Keep environment variables out of version control
 .env
 
