@@ -7,11 +7,13 @@ A discord bot that does encrypt the mods for you.
 ### Windows
 
 - git
+- lock.exe (Piboso has the file)
 - Node.js (Tested with 18.17.0)
 
 ### Linux
 
 - git
+- lock.exe (Piboso has the file)
 - Node.js (Tested with 18.17.0)
 - Wine (32 bit + 64 bit)
 
@@ -119,7 +121,7 @@ A discord bot that does encrypt the mods for you.
     pm2 startup
     ```
     
-    Skip step 8 and use this command
+    Skip step 8 in [General Instructions](https://github.com/FynniX/krp-discord-bot/edit/main/README.md#general) and use this command
 
     ```sh
     pm2 start npm --name KRP-Discord-Bot -- run start
