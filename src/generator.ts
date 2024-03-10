@@ -39,6 +39,16 @@ async function start(memberId: number, modId: number) {
     const tmpFolder = path.join(dirname(import.meta.url), "../tmp");
     const publicFolder = path.join(dirname(import.meta.url), "../public");
 
+    // Create folder when don't exist
+    if (!fs.existsSync(modFolder))
+        fs.mkdirSync(modFolder, { recursive: true });
+
+    if (!fs.existsSync(tmpFolder))
+        fs.mkdirSync(tmpFolder, { recursive: true });
+
+    if (!fs.existsSync(publicFolder))
+        fs.mkdirSync(publicFolder, { recursive: true });
+
     // Set progress to start
     process.send({ type: "progress", progress: 0 })
 
