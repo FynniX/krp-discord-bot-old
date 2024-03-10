@@ -95,8 +95,10 @@ export class GenerateCommands {
         }
 
         // Has access to mod
-        const hasAccess = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === mods?.role)
-        if (!hasAccess && !member.isAdmin && interaction.guild?.ownerId !== interaction.user.id) {
+        // Weather user has patreon
+        const isPatreon = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === process.env.PATREON_ROLE)
+        const hasAccess = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === mods?.role || "")
+        if (!hasAccess && !isPatreon && !member.isAdmin && interaction.guild?.ownerId !== interaction.user.id) {
             interaction.editReply({ content: ":x: - You don't have access to this mod" });
             return
         }
@@ -159,13 +161,6 @@ export class GenerateCommands {
 
         if (member.guid === null) {
             interaction.editReply({ content: ":x: - You need to set your guid first" });
-            return
-        }
-
-        // Weather user has patreon
-        const isPatreon = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === process.env.PATREON_ROLE)
-        if (!isPatreon && !member.isAdmin && interaction.guild?.ownerId !== interaction.user.id) {
-            interaction.editReply({ content: ":x: - You need a patreon membership to use this command" });
             return
         }
 
