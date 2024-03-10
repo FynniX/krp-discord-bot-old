@@ -21,6 +21,16 @@ A discord bot that does encrypt the mods for you.
 
 - Make sure WEBSERVER_PORT is open
 
+## Role structure
+
+1. Patreon role
+
+    _Has access to all mods_
+
+2. Mods specific role
+
+    _Only access to one mod_
+
 ## Folder structure
 
 - Mods Folder
