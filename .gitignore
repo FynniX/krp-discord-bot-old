@@ -1,0 +1,16 @@
+# Folders
+node_modules
+dist
+mods/**/*
+public/**/*
+tmp/**/*
+
+# Keep environment variables out of version control
+.env
+
+# lock.exe
+lock.exe
+
+# IDE
+codealike.json
+.vscode
