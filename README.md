@@ -71,7 +71,7 @@ A discord bot that does encrypt the mods for you.
 
 7. _Mods Folder_
 
-    Create a folder called **mods** [Informations]()
+    Create a folder called **mods** [Informations](https://github.com/FynniX/krp-discord-bot?tab=readme-ov-file#folder-structure)
 
 
 7. _Build Source_
