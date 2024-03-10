@@ -38,7 +38,7 @@ model Mods {
   name      String
   filename  String
   version   String
-  role      String
+  role      String?
   files     Files[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
