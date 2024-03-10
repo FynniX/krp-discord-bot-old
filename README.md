@@ -21,6 +21,12 @@ A discord bot that does encrypt the mods for you.
 
 - Make sure WEBSERVER_PORT is open
 
+## Folder structure
+
+- Mods Folder
+
+    Put all unencrypted mods into that folder and name the file while creating the mod per command
+
 ## Installing
 
 ### General
@@ -62,6 +68,11 @@ A discord bot that does encrypt the mods for you.
     ```sh
     npm run generate
     ```
+
+7. _Mods Folder_
+
+    Create a folder called **mods** [Informations]()
+
 
 7. _Build Source_
 
