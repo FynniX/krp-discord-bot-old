@@ -83,14 +83,17 @@ A discord bot that does encrypt the mods for you.
 
     Create a folder called **mods** [Why?](https://github.com/FynniX/krp-discord-bot?tab=readme-ov-file#folder-structure)
 
+8. _Install lock.exe_
 
-7. _Build Source_
+   Place **lock.exe** inside bot directory
+   
+8. _Build Source_
 
     ```sh
     npm run build
     ```
 
-8. _Start Bot_
+9. _Start Bot_
 
     ```sh
     npm start
@@ -142,7 +145,7 @@ A discord bot that does encrypt the mods for you.
     pm2 startup
     ```
     
-    Skip step 8 in [General Instructions](https://github.com/FynniX/krp-discord-bot/edit/main/README.md#general) and use this command
+    Skip step 9 in [General Instructions](https://github.com/FynniX/krp-discord-bot/edit/main/README.md#general) and use this command
 
     ```sh
     pm2 start npm --name KRP-Discord-Bot -- run start
