@@ -206,13 +206,6 @@ export class GenerateCommands {
             return
         }
 
-        // Weather user has patreon
-        const isPatreon = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === process.env.PATREON_ROLE)
-        if (!isPatreon && !member.isAdmin && interaction.guild?.ownerId !== interaction.user.id) {
-            interaction.editReply({ content: ":x: - You need a patreon membership to use this command" });
-            return
-        }
-
         try {
             await prisma.member.update({
                 where: { id: member.id },
@@ -249,13 +242,6 @@ export class GenerateCommands {
         // Check weather guid is already set
         if (member.guid) {
             interaction.reply({ content: ":x: - You can only set the guid once, contact a admin if you want to change it again.", ephemeral: true });
-            return
-        }
-
-        // Weather user has patreon
-        const isPatreon = (interaction.member?.roles as GuildMemberRoleManager).cache.some(r => r.id === process.env.PATREON_ROLE)
-        if (!isPatreon && !member.isAdmin && interaction.guild?.ownerId !== interaction.user.id) {
-            interaction.editReply({ content: ":x: - You need a patreon membership to use this command" });
             return
         }
 

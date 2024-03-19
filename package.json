@@ -1,7 +1,7 @@
 {
   "name": "krp-discord-bot",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord Bot that can generate encrypted krp mods.",
   "main": "/dist/index.js",
   "scripts": {
